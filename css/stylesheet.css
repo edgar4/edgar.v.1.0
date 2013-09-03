@@ -1,0 +1,93 @@
+.content {
+	background-color: #fff;
+}
+#footer {
+	color: #CCCCCC;
+	background-color: #333333;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #FFFFFF;
+    padding: 10px 0;
+    text-align: center;
+}
+.error{
+	color:red;
+}
+.pad{padding-top:80px;}
+
+@media (max-width: 767px) {
+	.pad{padding-top:20px;}
+}
+.theBtn{
+	width:auto;
+	height:150px;
+	 color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #0044cc;
+}
+
+
+#items-carousel {
+	height: 310px;
+}
+.round{
+	border-radius:50px;
+}
+ [class^="icon-"], [class*=" icon-"]{
+    background:none!important;
+}
+
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+    line-height: 1.3em;
+}
+.one{
+	color:#7ac7ff;
+	font-size:32em;
+	text-align:center;
+	
+}
+.two{
+	color:#e75735;
+	font-size:32em;
+	text-align:center;
+	
+}
+.three{
+	color:#4eb7a8;
+	font-size:32em;
+	text-align:center;
+	
+	
+}
+
+	
+.accept li{
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+	width:50%;
+	height:5em;
+	
+}
+.accept .blue{
+	background:#1fbba6;
+}
+.accept .white{
+	background:#f4f4f4;
+}
+.centre{
+	text-align:center;
+}
+@media (max-width: 767px) {
+	.one,.two,.three{visibility:hidden;}
+}
