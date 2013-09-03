@@ -12,7 +12,9 @@ Standard features (web)
 *One to one secured chatting 
 *Social media integration (facebook and twitter)
 * Email Auto- responder 
-Standard features (web)
+
+
+Standard features (mobile)
 ===========
 it makes sense if its mobile its should be able to atleast make a call and send text
 *USSD intetration
