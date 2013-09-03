@@ -1,5 +1,8 @@
 edgar.v.1.0
 ===========
+creating my home on the world wide web i love it i use it i live on it
+naipenda tu sana 
+
 
 personal web and mobile application named after its author Edgar chris
 
