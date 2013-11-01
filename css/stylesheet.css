@@ -1,93 +1,296 @@
+
+/* Preloader */
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should have another color then white */
+	z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	background-image:url(../img/status.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+
+
 .content {
 	background-color: #fff;
+}
+.anchorone {
+	color: #FFF;
+}
+.centre {
+	font-size: 12px;
+	text-align: center;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.th {
+	width: 100%;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background: #eee;
+}
+th {
+	background: #333;
+	color: white;
+	font-weight: bold;
+	font-size: 10px;
+}
+td, th {
+	padding: 6px;
+	border: 1px solid #ccc;
+	text-align: left;
+	font-size: 10px;
+}
+#feedback {
+	font-size: 1.4em;
+}
+#selectable .ui-selecting {
+	background: #FECA40;
+}
+#selectable .ui-selected {
+	background: #ffb400;
+	color: white;
+}
+#selectable {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#selectable li {
+	margin: 3px;
+	padding: 0.4em;
+	height: 18px;
+}
+#selectable li {
+	margin: 3px;
+	padding: 0.4em;
+	height: 18px;
+}
+.list-detail {
+	
+}
+.list-header {
+	font-size: 18px;
+	background:#25bc85;
+	text-align:center;
+	color:#fff;
+}
+.budget{
+	background:#f45460;
+	color:white;
+}
+.list-header2 {
+	font-size: 18px;
+	background:#35aadc;
+	text-align:center;
+	color:#fff;
+}
+.list-header3 {
+	font-size: 18px;
+	background:#cc324b;
+	text-align:center;
+	color:#fff;
+}
+.list-header3 {
+	font-size: 18px;
+	background:#1a4e95;
+	text-align:center;
+	color:#fff;
+}
+
+
+.list-detail ul {
+	font-size: 18px;
+}
+
+.list-detail ul li {
+	font-size: 14px;
+	border: 1px solid #f4f4f4;
+	margin: 3px;
+	padding: 0.4em;
+	height: 18px;
+	list-style: none;
+}
+ @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+/* Force table to not be like tables anymore */
+table, thead, tbody, th, td, tr {
+	display: block;
+}
+/* Hide table headers (but not display: none;, for accessibility) */
+thead tr {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+tr {
+	border: 1px solid #ccc;
+}
+td {
+	/* Behave  like a "row" */
+	border: none;
+	border-bottom: 1px solid #eee;
+	position: relative;
+	padding-left: 50%;
+}
+td:before {
+	/* Now like a table header */
+	position: absolute;
+	/* Top/left values mimic padding */
+	top: 6px;
+	left: 6px;
+	width: 45%;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+/*
+	Label the data
+	*/
+td:nth-of-type(1):before {
+	content: "First Name";
+}
+td:nth-of-type(2):before {
+	content: "Last Name";
+}
+td:nth-of-type(3):before {
+	content: "Job Title";
+}
+td:nth-of-type(4):before {
+	content: "Favorite Color";
+}
+td:nth-of-type(5):before {
+	content: "Wars of Trek?";
+}
+td:nth-of-type(6):before {
+	content: "Porn Name";
+}
+td:nth-of-type(7):before {
+	content: "Date of Birth";
+}
+td:nth-of-type(8):before {
+	content: "Dream Vacation City";
+}
+td:nth-of-type(9):before {
+	content: "GPA";
+}
+td:nth-of-type(10):before {
+	content: "Arbitrary Data";
+}
 }
 #footer {
 	color: #CCCCCC;
 	background-color: #333333;
-    border-bottom: 1px solid #DDDDDD;
-    border-top: 1px solid #FFFFFF;
-    padding: 10px 0;
-    text-align: center;
+	border-bottom: 1px solid #DDDDDD;
+	border-top: 1px solid #FFFFFF;
+	padding: 10px 0;
+	text-align: center;
 }
-.error{
-	color:red;
+.valid {
+	font-size: 12px;
 }
-.pad{padding-top:80px;}
-
-@media (max-width: 767px) {
-	.pad{padding-top:20px;}
+.error {
+	color: red;
 }
-.theBtn{
-	width:auto;
-	height:150px;
-	 color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
-  border-color: #0044cc #0044cc #002a80;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #0044cc;
+#footer >container {
+	position: absolute;
 }
-
-
+.pad {
+	padding-top: 80px;
+}
+ @media (max-width: 767px) {
+.pad {
+	padding-top: 20px;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+}
+.theBtn {
+	width: auto;
+	height: 150px;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #006dcc;
+	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+	background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+	background-repeat: repeat-x;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+ *background-color: #0044cc;
+}
 #items-carousel {
 	height: 310px;
 }
-.round{
-	border-radius:50px;
+.round {
+	border-radius: 50px;
 }
- [class^="icon-"], [class*=" icon-"]{
-    background:none!important;
+ [class^="icon-"], [class*=" icon-"] {
+ background:none!important;
 }
-
 .btn [class^="icon-"], .btn [class*=" icon-"] {
-    line-height: 1.3em;
+	line-height: 1.3em;
 }
-.one{
-	color:#7ac7ff;
-	font-size:32em;
-	text-align:center;
-	
+.one {
+	color: #7ac7ff;
+	font-size: 5em;
+	text-align: center!important;
+	;
+	line-height: 80px;
 }
-.two{
-	color:#e75735;
-	font-size:32em;
-	text-align:center;
-	
+.two {
+	color: #e75735;
+	font-size: 32em;
+	text-align: center;
 }
-.three{
-	color:#4eb7a8;
-	font-size:32em;
-	text-align:center;
-	
-	
+.three {
+	color: #4eb7a8;
+	font-size: 32em;
+	text-align: center;
 }
-
-	
-.accept li{
-	float:left;
-	margin:0;
-	padding:0;
-	list-style:none;
-	width:50%;
-	height:5em;
-	
+.accept li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 50%;
+	height: 5em;
 }
-.accept .blue{
-	background:#1fbba6;
+.accept .blue {
+	background: #1fbba6;
 }
-.accept .white{
-	background:#f4f4f4;
+.accept .white {
+	background: #f4f4f4;
 }
-.centre{
-	text-align:center;
+.centre {
+	text-align: center;
 }
 @media (max-width: 767px) {
-	.one,.two,.three{visibility:hidden;}
+.one, .two, .three {
+	visibility: hidden;
+}
 }
