@@ -7,6 +7,39 @@ naipenda tu sana
 personal web and mobile application named after its author Edgar chris
 
 
+
+
+Dependencies
+
+codeignitor Framework
+
+Jade Template Engine
+
+Stylus CSS Engine
+OAuth
+
+ Installation
+Run npm install after cloning the repository.
+
+To generate the site simply run Grunt:
+
+grunt
+To serve the site at http://localhost:8000/ and watch for changed files:
+
+grunt serve
+To rsync the generated site to the remote server:
+
+grunt deploy:staging
+grunt deploy:live
+
+more details found at http://www.edgar.co.ke
+
+
+
+license
+
+all rights reserved, except where otherwise noted
+
 Standard features (web)
 ===========
 *Online project submission and proccesing
