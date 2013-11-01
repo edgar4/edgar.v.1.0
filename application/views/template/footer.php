@@ -1,6 +1,6 @@
 
 
-
+<div class="free">
 <footer id="footer" class="vspace20">
 	<div class="container">
 		<div class="row">
@@ -93,7 +93,9 @@
 
 	<script src="<?php echo base_url();?>js/holder.js"></script>
 	<script src="<?php echo base_url();?>js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    
+     <!--js ui-->
  
 <script src="<?php echo base_url();?>js/init-jquery-validate-contact.js"></script>
 
@@ -102,8 +104,37 @@
 	<script src="<?php echo base_url();?>js/init-isotope-pinterest.js"></script>
     	<script src="<?php echo base_url();?>js/bootbox.min.js"></script>
        <script src="<?php echo base_url();?>js/jquery-validate/script.js"></script>
+       <!--form-->
        
- 
+<!--           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="<?php echo base_url();?>js/formToWizard.js"></script>
+   
+    
+     
+	<script src="<?php echo base_url();?>js/ui/jquery.ui.core.js"></script>
+	<script src="<?php echo base_url();?>js/ui/jquery.ui.widget.js"></script>
+		<script src="<?php echo base_url();?>js/ui/jquery.ui.mouse.js"></script>
+<script src="<?php echo base_url();?>js/ui/jquery.ui.selectable.js"></script>
+     
+ <!--js ui-->
+<script type="text/javascript" src="<?php echo base_url();?>js/ui/divs.js"></script>   
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $(".SignupForm").formToWizard({ submitButton: 'SaveAccount' })
+        });
+    </script>
+    
+    <script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() { // makes sure the whole site is loaded
+			$('#status').fadeOut(); // will first fade out the loading animation
+			$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+			$('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+</script>    
+ </div>
  	
 
 		

@@ -13,6 +13,7 @@
 <!-- Included Bootstrap CSS Files -->
 <link rel="stylesheet" href="<?php echo base_url();?>js/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="<?php echo base_url();?>js/bootstrap/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/project.css"/>
 
 <!-- Includes FontAwesome -->
 <link rel="stylesheet" href="<?php echo base_url();?>css/fontawesome/css/font-awesome.css" />
@@ -26,6 +27,9 @@
 <link href="<?php echo base_url();?>css/acc-wizard.min.css" rel="stylesheet">
 <!-- Included Isotope CSS  basic file -->	
 	<link rel="stylesheet" href="<?php echo base_url();?>css/isotope.css" />
+    <!-- mobile-->
+   
+      <!-- mobile-->
 <script src="<?php echo base_url();?>js/jquery-validate/style.css"></script>
   <script src="<?php echo base_url();?>js/cdn-js.js"></script>
   
@@ -59,4 +63,5 @@ tinymce.init({
     ]
  });
 </script>
+
 </head>

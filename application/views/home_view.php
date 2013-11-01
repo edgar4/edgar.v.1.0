@@ -10,6 +10,7 @@
     <!-- dialog buttons -->
     <div class="modal-footer"><a href="#" class="btn primary" data-dismiss="modal">X</a></div>
 </div>
+<!--end modal-->
 
 <div id="carousel" class="">
   <div id="myCarousel" class="carousel slide mbottom0">
