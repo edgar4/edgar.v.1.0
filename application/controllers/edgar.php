@@ -72,6 +72,8 @@ public function setDeposit(){
 		  'is_logged_in' => true
 		);
 		
+		
+		
 		$this->session->set_userdata($data);
 		redirect('checkout/sendCash');
 	}else{

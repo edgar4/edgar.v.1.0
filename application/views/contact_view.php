@@ -16,8 +16,8 @@
                         $name = array(
               'name'        => 'name',
               'id'          => 'name',
-              'placeholder'   => 'Name',
-              'class'        => 'span4',
+              'placeholder'   => 'Name', 
+			  'class'        => 'span6',
               'type'       => 'text',
 			  'value'=> set_value('name'));
 							
@@ -34,8 +34,7 @@
                         $email = array(
               'name'        => 'email',
               'id'          => 'email',
-              'placeholder'   => 'Email',
-              'class'        => 'span4',
+              'placeholder'   => 'Email', 'class'        => 'span6',
               'type'       => 'text',
 			  'value'=> set_value('email')
             );
@@ -53,8 +52,7 @@
                         $phone = array(
               'name'        => 'phone',
               'id'          => 'phone',
-              'placeholder'   => 'phone',
-              'class'        => 'span4',
+              'placeholder'   => 'phone', 'class'        => 'span6',
               'type'       => 'text',
 			  'value'=> set_value('phone')
 			  
@@ -72,8 +70,7 @@
                         $city = array(
               'name'        => 'city',
               'id'          => 'city',
-              'placeholder'   => 'City',
-              'class'        => 'span4',
+              'placeholder'   => 'City', 'class'        => 'span6',
               'type'       => 'text',
 			  'value'=> set_value('city')
             );
@@ -91,8 +88,7 @@
                         $message = array(
               'name'        => 'message',
               'id'          => 'email',
-              'placeholder'   => 'Message',
-              'class'        => 'span4',
+              'placeholder'   => 'Message', 'class'        => 'span6',
               'rows'       => '6',
 			  'value'=> set_value('message')
             );
@@ -110,7 +106,7 @@
 							              $submit = array(
               'name'        => 'submit',
               'value'          => 'Send',
-              'class'        => 'btn  btn-large',
+              'class'        => 'btn  btn-default',
               'type'       => 'submit',
             ); 
                        echo  form_submit($submit)
@@ -126,7 +122,7 @@
         <div class="info"> <i class="contact email"></i> info@edgar.co.ke </div>
         <hr>
         <h3>am very social</h3>
-        <div class="social round"> <a href="#"><img src="<?php echo base_url()."img/socials/facebook.png"?>" alt="" /></a> <a href="#"><img src="<?php echo base_url()."img/socials/twitter.png"?>" alt="" /></a> <a href="#"><img src="<?php echo base_url()."img/socials/linkedin.png"?>" alt="" /></a> <a href="#"><img src="<?php echo base_url()."img/socials/github.png"?>" alt="" /></a> </div>
+        <div class="social round"> <a href="#"><img src="<?php echo base_url()."img/socials/facebook.png"?>" alt="facebook" height="32" width="32" /></a> <a href="#"><img src="<?php echo base_url()."img/socials/twitter.png"?>" alt="twitter" height="32" width="32"  /></a> <a href="#"><img src="<?php echo base_url()."img/socials/linkedin.png"?>" alt="linkedin"  height="32" width="32"/></a> <a href="#"><img src="<?php echo base_url()."img/socials/github.png"?>" alt="github" height="32" width="32" /></a> </div>
       </div>
     </div>
   </div>

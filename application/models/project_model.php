@@ -5,7 +5,7 @@ public function validate(){
 	 $this->db->where('lastname',$this->input->post('last'));
 	 $this->db->where('email',$this->input->post('email'));
 	 $query = $this->db->get('projectNew');
-	  if($query->num_rows()==1){ 
+	  if($query->num_rows()>0){ 
 		  return true;
 	  }	
  }
@@ -19,7 +19,7 @@ public function get_records($name,$lastname,$email){
 		}
  }
 public function add_record($data){
-		$this->db->insert('projectNew',$data);
+		$this->db->insert('buyers',$data);
 		return;
  }
 public function update_record($data){

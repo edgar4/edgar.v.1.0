@@ -1,20 +1,18 @@
-
-
-            
+        
  <!-- set up the modal to start hidden and fade in and out -->
 <div id="myModal" class="modal hide fade">
-<div class="modal-header lead well"><small class="centre">review details below</small></div>
+<div class="modal-header lead well"><small class="centre alert alert-danger">Amount Paid in advance is deductable from total project cost</small></div>
     <!-- dialog contents -->
     <div class="modal-body ">
        <?php if(isset($records)): foreach($records as $row):?>
 <?php echo Form_open('checkout/pesa')?>
 	<table>
 		<tr>
-			<td>Amount to be paid:</td>
+		<td>Amount to be paid:</td>
         <td>
-        <?php echo $row->budget ?>
-            <input type="hidden" name="amount" value="5000" />
-			  (in Kshs)
+        <?php echo "<h5>". $row->budget /4 ."/=</h5>"; ?>
+            <input type="hidden" name="amount" value="<?php echo $row->budget /4 ; ?>" placeholder="" />
+               <?php echo"recomended amount Ksh ". $row->budget / 4 . "/= as per your total budget estimate of Ksh " .$row->budget ."/= " ; ?>
 			</td>
 		</tr>
 		<tr>
@@ -59,7 +57,9 @@
             <input type="hidden" name="email" value="<?php  echo $row->email ?>" /></td>
 		</tr>
 		<tr>
-			<td colspan="2"><input type="submit" value="Make Payment"  class="btn btn-small"/></td>
+			<td colspan="2">
+            <br/>
+            <input type="submit" value="Make Payment"  class="btn btn-default"/></td>
 		</tr>
 	</table>
      <?php endforeach;?>
@@ -72,13 +72,13 @@
 
     </div>
     <!-- dialog buttons -->
-    <div class="modal-footer"><a href="#" class="btn primary" data-dismiss="modal">X</a></div>
+    <div class="modal-footer"><a href="#" class="btn btn-primary" data-dismiss="modal">X</a></div>
 </div>
 <!--end modal-->
 <div class="container">
   <div class="row">
     <div class="span6">
-      <h4 class="lead"><small>this is a secure platform and you can make advance payment at this point </small></h4>
+      <p class="alert alert-info"><small> <i>your Project has been submitted and a copy sent to your email</i> <br/><p>this is a secure platform and you can make advance payment at this point <?php echo anchor('sandbox','Or  Browse My Work');?></p> </small></p>
       
       <span class="btn btn-large btn-success"><?php
 	  $css= array(
@@ -87,12 +87,16 @@
 	  
 	  
 	  );
-	   echo anchor('checkout/#myModal','Submit and Proceed to Pay',$css)?></span>
-      <span></span>
-
+	   echo anchor('checkout/#myModal',' Proceed to Make Advance Payment',$css)?></span>
+       <br/> &nbsp; <br/> &nbsp; <br/> &nbsp; 
+      <span class="">
+      <?php echo anchor('sandbox',' Browse My Work');?>
+      </span>
        </div>
     <div class="span6 ">
       <div class="address">
+      <br/> 
+      
       <div class="well">
 
     

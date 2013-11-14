@@ -18,7 +18,7 @@
                 <label class="control-label" for="name">Name:</label>
                 <?php
                         $name = array(
-              'name'        => 'name','name'        => 'name',
+              'name'        => 'name',
               'id'          => 'name',
               'placeholder'   => 'i love to know your name',
               'class'        => 'span6',
@@ -205,16 +205,11 @@
           <fieldset>
             <legend>Thats it we are done !!</legend>
              <div class="control-group">
-
-        <label for="message-long">Click on the big Green Button !!!</label>
-  
         <div class="controls">
-  
-        </div>
-      </div>
           </fieldset>
-          <input id="SaveAccount" type="submit" value="Submit project " class="btn btn-large btn-success pull-right" />
-        
+          <br/>&nbsp;<br/>&nbsp;
+          <input id="SaveAccount" type="submit" value="Submit project " class="btn btn-large btn-success " />
+        <br/>&nbsp;<br/>&nbsp;
       </div>
     </div>
     <div class="span5 offset1">
@@ -222,7 +217,7 @@
         <div class="pad">
         
           <p id="feedback">
-<span id="select-result"><legend>Your Project will be handled with the Best</legend></span>
+<span id="select-result"></span>
 </p>
 
         </div>
