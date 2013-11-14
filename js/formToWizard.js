@@ -43,11 +43,11 @@
 
         function createPrevButton(i) {
             var stepName = "step" + i;
-            $("#" + stepName + "commands").append("<a href='#' id='" + stepName + "Prev' class='prev btn btn-small'>< Back</a>");
+            $("#" + stepName + "commands").append("<a href='#' id='" + stepName + "Prev' class='prev btn btn-default'>< Back</a>");
 
             $("#" + stepName + "Prev").bind("click", function(e) {
                 $("#" + stepName).hide();
-                $("#step" + (i - 1)).show();
+                $("#step" + (i - 1)).fadeIn(1000);
                 $(submmitButtonName).hide();
                 selectStep(i - 1);
             });
@@ -55,11 +55,11 @@
 
         function createNextButton(i) {
             var stepName = "step" + i;
-            $("#" + stepName + "commands").append("<a href='#' id='" + stepName + "Next' class='next btn btn-small'>Next ></a>");
+            $("#" + stepName + "commands").append("<a href='#' id='" + stepName + "Next' class='next btn btn-default'>Next ></a>");
 
             $("#" + stepName + "Next").bind("click", function(e) {
                 $("#" + stepName).hide();
-                $("#step" + (i + 1)).show();
+                $("#step" + (i + 1)).fadeIn(1000);
                 if (i + 2 == count)
                     $(submmitButtonName).show();
                 selectStep(i + 1);

@@ -11,6 +11,10 @@
 				minlength: 2,
 				required: true
 			},
+			last: {
+				minlength: 2,
+				required: true
+			},
 			email: {
 				required: true,
 				email: true
@@ -21,6 +25,11 @@
 			},
 			phone: {
 				minlength: 9,
+				required: true,
+				number:  true
+				
+			},
+			amount: {
 				required: true,
 				number:  true
 				
