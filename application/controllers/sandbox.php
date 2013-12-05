@@ -11,6 +11,11 @@ class sandBox extends CI_Controller {
 
 	public function index()
 	{
+		 $this->load->model('meta_model');
+		
+		$data_temp = array(
+		'meta'=> $this->meta_model->project()
+		);
 		 $config = array();
         $config["base_url"] = base_url() . "sandbox/index";
         $config["total_rows"] = $this->sandbox_model->record_count();
@@ -22,7 +27,7 @@ class sandBox extends CI_Controller {
  
         $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 	    $data_temp['projects'] =  $this->sandbox_model->fetch_countries($config["per_page"], $page);
-		$data_temp['links'] = $this->pagination->create_links();;
+		$data_temp['links'] = $this->pagination->create_links();
 		
 		$data_temp['content'] = "sandbox_view";
 		$this->load->view('template_main',$data_temp);

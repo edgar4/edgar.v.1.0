@@ -19,7 +19,7 @@ public function get_records($name,$lastname,$email){
 		}
  }
 public function add_record($data){
-		$this->db->insert('buyers',$data);
+		$this->db->insert('projectnew',$data);
 		return;
  }
 public function update_record($data){

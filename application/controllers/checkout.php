@@ -65,6 +65,7 @@ function update(){
 	 
 	$this->load->model('project_model');
 	$this->project_model->update_record($update);
+	
         }
 }
 }

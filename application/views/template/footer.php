@@ -1,6 +1,6 @@
-
-<div class="free">
+<div class="free" >
   <footer id="footer" class="vspace20">
+  <div class="footer">
     <div class="container" >
       <div class="row">
         <div class="span4">
@@ -16,7 +16,8 @@
         </div>
         <div class="span4">
           <h4>tweets</h4>
-          
+          <div class="twitterback">
+                      <a id="tweet" class="twitter-timeline"  href="https://twitter.com/edgarchris99"  data-widget-id="321943528475336704"  data-chrome="transparent noscrollbar nofooter" data-theme="dark"  >Tweets by @edgarchris99</a></div>
          
         </div>
         <div class="span4">
@@ -36,10 +37,12 @@
   </footer>
   <div class="row socialbar">
     <div class="span6">
-      <p>&copy; Copyright 2013 Sleekchris.&nbsp;<a href="#">Privacy</a>&nbsp;&amp;&nbsp;<a href="#">Terms and Conditions</a></p>
+      <p>&copy; Copyright 2013 Sleekchris.&nbsp;<a href="#">Privacy</a>&nbsp;&amp;&nbsp;<a href="#">Terms and Conditions</a></p></div>
     </div>
   </div>
   <a class="scrolltotop" href="#"><span>up</span></a> 
+  
+<script type="text/javascript" src="<?php echo base_url();?>js/tinymce/tinymce.min.js"></script>
   <script src="<?php echo base_url();?>js/jquery-1.8.3.min.js" type="text/javascript"></script> 
   <script src="<?php echo base_url();?>js/bootstrap/js/bootstrap.min.js"></script> 
   <script src="<?php echo base_url();?>js/jquery-validate/assets/js/jquery.validate.min.js"></script> 
@@ -61,6 +64,7 @@
   <!--js validation--> 
   <script src="<?php echo base_url();?>js/holder.js"></script> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  
   <!--js ui--> 
   <script src="<?php echo base_url();?>js/jquery.infinitescroll.min.js"></script> 
   <script src="<?php echo base_url();?>js/bootbox.min.js"></script> 
@@ -75,9 +79,10 @@
   <script src="<?php echo base_url();?>js/ui/jquery.ui.selectable.js"></script> 
   <!--js ui--> 
   <script type="text/javascript" src="<?php echo base_url();?>js/ui/divs.js"></script> 
-  <script type="text/javascript" src="<?php echo base_url();?>js/functions.js">> </script> 
+  <script type="text/javascript" src="<?php echo base_url();?>js/functions.js"> </script> 
 </div>
 <script type="text/javascript" src="<?php echo base_url();?>js/greensock/TweenMax.min.js"></script> 
 <script>window.jQuery || document.write('<script src="_/js/jquery-1.9.1.min.js"><\/script>')</script> 
 <script src="<?php echo base_url();?>js/jquery.superscrollorama.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/menu.js"></script>
 </body></html>

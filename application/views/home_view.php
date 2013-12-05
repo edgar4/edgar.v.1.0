@@ -43,7 +43,7 @@
       <div class="active item">
         <div class="container">
           <div class="carousel-caption">
-            <h1>I build awesome web apps, watch cartoons, write code and drink lots of coffee</h1>
+            <h1>Am <span>Edgar the Creator</span>, i create <span>web and mobile apps</span>, write <span>code </span>, watch toons <span>and</span> is a serial <span>coffee drinker</span></h1>
             <p class="lead">am super great in front and back end developement <br/>&nbsp;
             <br/>&nbsp;
             <a href="<?php echo base_url() . "edgar/newProject";?>" class="btn btn-default">Drop me a project</a> or    <a href="#myModal" class="btn  btn-default"  data-toggle="modal">tell a friend </a>

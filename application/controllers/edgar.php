@@ -1,7 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Edgar extends CI_Controller {
 public function index()
-	{
+	{ $this->load->model('meta_model');
+		
+		$data_temp = array(
+		'meta'=> $this->meta_model->home()
+		);
 		$data_temp['content'] = "home_view";
 		$this->load->view('template_main',$data_temp);
 }//end
@@ -12,8 +16,11 @@ public function newProject(){
 		$this->load->view('template_main',$data_temp);
 }//end
 public function contact(){
+	    $this->load->model('meta_model');
+		
 		$data_temp = array(
 		'content'=> "contact_view",
+		'meta'=> $this->meta_model->contact()
 		);
 		$this->load->view('template_main',$data_temp);
 }//end

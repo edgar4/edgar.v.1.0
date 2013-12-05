@@ -4,27 +4,30 @@
     <div class="span12">
     
       <?php if(isset($projects)): foreach($projects as $project):?>
-      <div class="span6">
-        <div class="item_slider gallery">
-          <ul class="gallery-inner">
-            <li class="photos"><img src="<?php echo base_url()?>img/project/project.png" width="400" height="292" /></li>
-          </ul>
-        </div>
+      <div class="span7">
+      &nbsp;
+      <div class="browser">
+      <div class="browser-top">
+<a href="<?php echo $project->url;?>"><?php echo $project->url;?></a>
+</div>
+        
+        <img src="<?php echo base_url().'images/'.$project->image;?>" width="732" height="562" />
+    </div>
       </div>
-      <div class="span5 offest-1">
+      <div class="span4 offest-1">
         <div class="item_text">
           <h3><?php echo $project->title;?></h3>
           <div class="clear"></div>
           <br/>
-          <h4>Overview:</h4>
+          <h6>Overview:</h6>
           <div class="clear"></div>
           <p><?php echo $project->overview;?> </p>
-          <h4>My Contribution:</h4>
+          <h6>My Contribution:</h6>
           <ul>
             <?php echo $project->contribution;?>
           </ul>
         
-          <h5>Client: <span>Client name</span></h5>
+          <h6>Client: <span>Client name</span></h6>
  
 
 						<div class="isotope-actions">
@@ -48,6 +51,7 @@
     <?php endif;?>
     <span class="clearfix"></span>
    <div class="row">
+   &nbsp;
    <?php 
  
    echo $links; ?>

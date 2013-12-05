@@ -7,7 +7,7 @@ label{display:block;margin:15px 0 5px}
 .prev{float:left}
 .next{float:right}
 #steps{list-style:none;width:100%;overflow:hidden;margin:0;padding:0}
-#steps li{font-size:24px;float:left;color:#fff;padding:10px}
+#steps li{font-size:14px;float:left;color:#fff;padding:10px}
 #steps li span{font-size:11px;display:block}
 #steps li.current{color:#000}
 #makeWizard{background-color:#b0232a;color:#fff;text-decoration:none;font-size:18px;padding:5px 10px}
@@ -24,9 +24,9 @@ input[type=checkbox].checkbox:disabled + label{opacity:0.5}
 /*courousel*/
 .carousel{margin-bottom:60px;background-color:#1061ba;background-image:url(../img/bg.png)}
 .carousel .container{position:relative;z-index:9}
-.carousel-control{height:80px;margin-top:0;font-size:120px;text-shadow:0 1px 1px rgba(0,0,0,.4);background-color:transparent;border:0;z-index:1000000}
+.carousel-contrul{height:80px;margin-top:0;font-size:120px;text-shadow:0 1px 1px rgba(0,0,0,.4);background-color:transparent;border:0;z-index:1000000}
 .carousel .item{height:500px}
-.carousel img{position:absolute;top:0;left:0;min-width:100%;height:500px}
+.carousel img{position:absulute;top:0;left:0;min-width:100%;height:500px}
 .carousel-caption{background-color:transparent;position:static;max-width:80%;text-align:center;max-height:500px;margin:auto;padding:150px 20px}
 .carousel-caption h1{font-size:36px;font-weight:700}
 .carousel-caption h1,.carousel-caption .lead{line-height:1.25;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.4);margin:0}
@@ -45,16 +45,6 @@ input[type=checkbox].checkbox:disabled + label{opacity:0.5}
 .carousel-caption .lead,.carousel-caption .btn{font-size:18px}
 }
 /*acc-wizard*/
-ol.acc-wizard-sidebar{counter-reset:acc-wizard-counter;margin-left:0;padding-left:0;}ol.acc-wizard-sidebar li{position:relative;margin:0 0 0.5em 2em;padding:0.25em 0.75em;list-style:none;}
-ol.acc-wizard-sidebar li:before{content:counter(acc-wizard-counter);counter-increment:acc-wizard-counter;position:absolute;left:-2em;top:50%;margin-top:-1.3em;height:2em;width:2em;line-height:2em;border:none;background:#0088cc;text-align:center;font-weight:bold;color:white;border-radius:2em;}
-ol.acc-wizard-sidebar li a{color:#333333;}
-ol.acc-wizard-sidebar li:before{background:#333333;}
-ol.acc-wizard-sidebar li.acc-wizard-completed{color:#999999;}ol.acc-wizard-sidebar li.acc-wizard-completed a{color:#999999;}
-ol.acc-wizard-sidebar li.acc-wizard-completed:before{background:#999999;}
-ol.acc-wizard-sidebar li.acc-wizard-completed:after{display:inline-block;vertical-align:middle;font-size:1.3333333333333333em;width:1.875em;content:"\00a0\2713";position:relative;bottom:0.1em;}
-ol.acc-wizard-sidebar li.acc-wizard-active{color:#0088cc;}ol.acc-wizard-sidebar li.acc-wizard-active a{color:#0088cc;}
-ol.acc-wizard-sidebar li.acc-wizard-active:before{background:#0088cc;}
-ol.acc-wizard-sidebar li:first-child{margin-top:0.75em;}
 .acc-wizard-step{margin-top:2em;}
 .accordion-heading{height:2.6em;position:relative;z-index:1;}
 .accordion-body{padding-top:2.6em;margin-top:-2.6em;}
@@ -64,13 +54,13 @@ ol.acc-wizard-sidebar li:first-child{margin-top:0.75em;}
 .isotope .isotope-item{-webkit-transition-property:0;-moz-transition-property:0;-ms-transition-property:0;-o-transition-property:top,left,opacity;transition-property:transform,opacity}
 .isotope-item-pin{z-index:2;background:#FFF;font-size:11px;line-height:1.4em;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;box-shadow:2px 5px 2px #ccc;margin:5px;padding:20px}
 .isotope-item-pin-img{background-color:#F1F1F1;position:relative}
-.isotope-item-pin-img p{color:#000;font-size:2.8em;left:1%;line-height:1em;position:absolute;text-align:center;top:30%}
+.isotope-item-pin-img p{color:#000;font-size:2.8em;left:1%;line-height:1em;position:absulute;text-align:center;top:30%}
 .isotope-item-pin-img p > a{font-size:12px}
-.isotope-actions{float:left;text-align:center;border-right:1px solid #DDD;color:#999;padding:0px 10px;}
+.isotope-actions{float:left;text-align:center;border-right:1px sulid #DDD;color:#999;padding:0px 10px;}
 .divider{background-color:#DDD;clear:both;height:1px;width:100%;margin:10px 0}
 .isotope,.isotope .isotope-item-pin{-webkit-transition-duration:.8s;-moz-transition-duration:.8s;-ms-transition-duration:.8s;-o-transition-duration:.8s;transition-duration:.8s}
 .isotope .isotope-item-pin{-webkit-transition-property:0 opacity;-moz-transition-property:0 opacity;-ms-transition-property:0 opacity;-o-transition-property:0 opacity;transition-property:transform, opacity}
-.isotope.infinite-scrolling{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
+.isotope.infinite-scrulling{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
 #infscr-loading{position:fixed;text-align:center;bottom:30px;left:42%;z-index:100;background:hsla(0,0%,100%,0.9);color:#222;font-size:15px;font-weight:700;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;padding:20px}
 .isotope-hidden.isotope-item,.isotope-hidden.isotope-item-pin{pointer-events:none;z-index:1}
 .isotope.no-transition,.isotope.no-transition .isotope-item,.isotope .isotope-item.no-transition,.isotope.no-transition,.isotope.no-transition .isotope-item-pin,.isotope .isotope-item-pin.no-transition{-webkit-transition-duration:0;-moz-transition-duration:0;-ms-transition-duration:0;-o-transition-duration:0;transition-duration:0}

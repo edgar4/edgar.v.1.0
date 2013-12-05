@@ -139,9 +139,8 @@
 </fieldset>
 <fieldset>
 <?php foreach ($cart as $item): ?>
-  <div class="control-group"> <?php echo"<div class=\"error\">".  form_error('email'). "</div>";?>
+  <div class="control-group"> 
     <div class="controls">
-      <label class="control-label" for="email">Email:</label>
       <?php
                         $rowid = array(
               'name'        => 'row_id',
@@ -168,12 +167,13 @@
 &nbsp;
 <center>
 <input id="SaveAccount" type="submit" value="Proceed to pay " class="btn btn-large btn-success " />
-<form>
+<?php echo form_close();?>
 <?php endif; ?>
 </div>
 </div>
 <!-- dialog buttons -->
 <div class="modal-footer"></div>
+</div>
 </div>
 <!--end modal-->
 
@@ -181,6 +181,7 @@
 <div class="container">
 <div class="row">
 <div class="span9">
+<?php if(isset($thanks)){echo $thanks;}?>
   <div class="hero-unit btn-info">
     <h2 class="">Site Templates and Themes </h2>
     <p class="">Browse by Category</p>
@@ -190,9 +191,11 @@
     <?php foreach ($products as $product): ?>
     <li class="span3"> <?php echo form_open('shop/add'); ?>
       <div class="thumbnail"><?php echo img(array(
-				'src' => 'img/shop/' . $product->image,
+				'src' => 'images/shop/' .trim($product->image),
 				'class' => 'thumb',
-				'alt' => $product->name
+				'alt' => $product->name,
+				'width' => 295,
+				'height' => 200,
 			)); ?>
         <div class="caption">
           <h5><?php echo $product->name; ?></h5>
@@ -213,21 +216,15 @@
     <?php endforeach; ?>
   </ul>
   <div class="pagination">
-    <ul>
-      <li class"disabled"><span>Prev</span></li>
-      <li class"disabled"><span>1</span></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">Next</a></li>
-    </ul>
+    <?php 
+ 
+   echo $links; ?>
   </div>
 </div>
 <div class="span3">
 <?php if ($cart = $this->cart->contents()): ?>
 <div class="well">
-  <div class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="icon-shopping-cart"></i> Total cost - $<?php echo $this->cart->total(); ?> <b class="caret"></b></a> </a>
+  <div class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="icon-shopping-cart"></i> Total cost - Ksh.<?php echo $this->cart->total() .'/='; ?> <b class="caret"></b></a> </a>
     <div class="dropdown-menu well" role="menu" aria-labelledby="dLabel">
       <table>
         <caption>
@@ -250,13 +247,13 @@
 						}
 						
 					} ?></td>
-          <td>$<?php echo $item['subtotal']; ?></td>
+          <td>Ksh.<?php echo $item['subtotal'].'/='; ?></td>
           <td class="remove"><?php echo anchor('shop/remove/'.$item['rowid'],'X'); ?></td>
         </tr>
         <?php endforeach; ?>
         <tr class="total">
           <td colspan="2"><strong>Total</strong></td>
-          <td>$<?php echo $this->cart->total(); ?></td>
+          <td>Ksh.<?php echo $this->cart->total() .'/='; ?></td>
         </tr>
       </table>
       &nbsp;
@@ -290,18 +287,12 @@
 <?php else:?>
 <div class="well">
   <ul class="nav nav-list">
-    <li class="nav-header">Sidebar</li>
-    <li class="active"> <a href="#">Link</a> </li>
-    <li> <a href="#">Link</a> </li>
-    <li> <a href="#">Link</a> </li>
-    <li class="nav-header">Sidebar</li>
-    <li> <a href="#">Link</a> </li>
-    <li> <a href="#">Link</a> </li>
-    <li> <a href="#">Link</a> </li>
-    <li class="nav-header">Sidebar</li>
-    <li> <a href="#">Link</a> </li>
-    <li> <a href="#">Link</a> </li>
-    <li> <a href="#">Link</a> </li>
+    <li class="nav-header">Category</li>
+    <li class="active"> <a href="#">Apps</a> </li>
+    <li> <a href="#">Joomla</a> </li>
+    <li> <a href="#">wordpress</a> </li>
+      <li> <a href="#">Plugins</a> </li>
+   
   </ul>
 </div>
 <div class="well">

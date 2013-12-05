@@ -1,14 +1,59 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Blog extends CI_Controller {
+	
+	   public function __construct() {
+		   
+		   
+        parent:: __construct();
+        $this->load->model("blog_model");
+        $this->load->library("pagination");
+    }
 
 	public function index()
 	{
+			 $this->load->model('meta_model');
+		
+		$data_temp = array(
+		'meta'=> $this->meta_model->project()
+		);
+		 $config = array();
+        $config["base_url"] = base_url() . "blog/index";
+        $config["total_rows"] = $this->blog_model->record_count();
+        $config["per_page"] = 3;
+        $config["uri_segment"] = 3;
+		$config['full_tag_open'] = '<ul class="paginate"><li>';
+        $config['full_tag_close'] = '</li></ul>';
+        $this->pagination->initialize($config);
+ 
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+	    $data_temp['blogs'] =  $this->blog_model->fetch_countries($config["per_page"], $page);
+		$data_temp['links'] = $this->pagination->create_links();
+		
 		$data_temp['content'] = "blog_view";
 		$this->load->view('template_main',$data_temp);
 		
 	}
-	
+	function post(){
+		$this->load->model('blog_model');
+			 $this->load->model('meta_model');
+		
+		$data_temp = array(
+		'meta'=> $this->meta_model->project()
+		);
+		 $config = array();
+        $config["base_url"] = base_url() . "blog/index";
+        $config["total_rows"] = $this->blog_model->record_count();
+        $config["per_page"] = 3;
+        $config["uri_segment"] = 3;
+		$config['full_tag_open'] = '<ul class="paginate"><li>';
+        $config['full_tag_close'] = '</li></ul>';
+        $this->pagination->initialize($config);
+		$data_temp['links'] = $this->pagination->create_links();
+		$data_temp['blogs'] =$this->blog_model->get_blog();
+		$data_temp['content'] = "post_blog_view";
+		$this->load->view('template_main',$data_temp);
+	}
 }
 
 /* End of file welcome.php */

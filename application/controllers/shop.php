@@ -5,7 +5,25 @@ class Shop extends CI_Controller {
 	public function index()
 	{
 	$this->load->model('products_model');
-	$data_temp['products'] = $this->products_model->get_all();
+	$this->load->library('pagination');
+	 $this->load->model('meta_model');
+		
+		$data_temp = array(
+		'meta'=> $this->meta_model->shop()
+		);
+	 $config = array();
+        $config["base_url"] = base_url() . "shop/index";
+        $config["total_rows"] = $this->products_model->record_count();
+        $config["per_page"] = 6;
+        $config["uri_segment"] = 3;
+		$config['full_tag_open'] = '<ul><li>';
+        $config['full_tag_close'] = '</li></ul>';
+        $this->pagination->initialize($config);
+ 
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+	   /* $data_temp['products'] =  $this->products_model->fetch_countries();*/
+		$data_temp['links'] = $this->pagination->create_links();
+	$data_temp['products'] = $this->products_model->get_all($config["per_page"], $page);
 	$data_temp['content'] = "shop_view";
 	$this->load->view('template_main',$data_temp);
 	}
@@ -66,14 +84,31 @@ function checkout(){
 			);
 	   $this->load->model('products_model');
 	   $this->products_model->add_record($data);
-	   $data_temp['products'] = $this->products_model->get_all();
+	   $data_temp['products'] = $this->products_model->get_all_this();
 	    $data_temp['content'] = "pesa_shop_view";
         $this->load->view('template_main',$data_temp);
 		}
 	
 }
 	
+function update(){			
+     $this->load->model('products_model');
+	// update data base
+	 $tracker = $this->input->get('pesapal_transaction_tracking_id');
+	 $id = $this->input->get('pesapal_merchant_reference');
+	 $update = array(
+	 'tracking_id'=> $tracker,
+	 'pesapal_merchant_reference'=> $id
+	 );
+	 
 	
+	$this->products_model->update_record($update);
+	$this->cart->destroy();
+	$this->index();
+	 
+     
+}
+
 }
 
 /* End of file welcome.php */
